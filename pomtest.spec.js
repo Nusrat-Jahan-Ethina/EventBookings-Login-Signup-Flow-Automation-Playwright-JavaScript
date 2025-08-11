@@ -18,7 +18,7 @@ function generateAlias(baseEmail) {
 
 test ('test', async ({page}) => {
     
-    //Signup Flow - Positive Testing
+    //Signup Flow
     const signup = new SignupPage(page);
     await signup.navigateToSignup();
     await signup.createNewUser('Test', 'User', email, password);
@@ -32,5 +32,6 @@ test ('test', async ({page}) => {
     await login.loginForm();
     await login.loginWithCredentials('johndoe@gmail.com', 'Abcd#1234');
     await page.waitForTimeout(3000);
+
 
 });
