@@ -70,6 +70,7 @@ exports.LoginPage = class LoginPage {
         await this.page.locator(this.emailInput).fill(email);
         await this.page.locator(this.passInput).fill(password);
         await this.page.locator(this.loginButton).click();
+        await this.page.waitForSelector('.font-15.user-name.mr-0'); //Verify redirection to landing page
         
     }
 
