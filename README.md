@@ -8,23 +8,27 @@ It is designed with a scalable Page Object Model (POM) structure, supports multi
 ---
 
 1. **Clone the repository:**
-
-bash
+```
 git clone https://github.com/Nusrat-Jahan-Ethina/EventBookings-Login-Signup-Flow-Automation-Playwright-JavaScript-.git
+```
 
 2. **Install dependencies:**
-
+```
 npm install
+```
 
 3.**Install Playwright browsers:**
-
+```
 npx playwright install
+```
 
 ## Configure Credentials (.env)
 Create a .env file in the project root directory with the following content:
 
+```
 BASE_GMAIL=yourbaseemail@gmail.com
 BASE_PASSWORD=YourSecurePassword123!
+```
 
 The tests generate unique emails using Gmail aliasing based on BASE_GMAIL.
 The password BASE_PASSWORD is used for signup and login.
