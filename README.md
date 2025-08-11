@@ -71,7 +71,7 @@ Some dynamic UI elements might cause occasional flaky tests due to timing.
 
 Rate limits or throttling on the website might affect repeated test runs.
 
-##Additional Notes
+## Additional Notes
 Ensure your .env file is included in .gitignore to protect sensitive data.
 
 Test data generation uses timestamp-based email aliasing for uniqueness.
