@@ -33,5 +33,60 @@ BASE_PASSWORD=YourSecurePassword123!
 The tests generate unique emails using Gmail aliasing based on BASE_GMAIL.
 The password BASE_PASSWORD is used for signup and login.
 
+## Running Tests
+# Run all tests:
+
+bash
+Copy
+Edit
+npx playwright test
+Run a specific test file:
+
+bash
+Copy
+Edit
+npx playwright test tests/login.spec.js
+Run tests by tag (e.g., @signup):
+
+bash
+Copy
+Edit
+npx playwright test --grep @signup
+Run tests in headed mode (with UI visible):
+
+bash
+Copy
+Edit
+npx playwright test --headed
+Test Coverage Summary and Known Limitations
+Covers key signup and login scenarios, including:
+
+New user signup with unique email alias
+
+Validation for weak passwords and duplicate emails
+
+Login with valid, invalid, empty, and non-existing user credentials
+
+Logout functionality
+
+Multi-browser and mobile device profile testing
+
+Visual screenshots captured after successful signup for verification.
+
+Known Limitations:
+
+CAPTCHA challenges during signup/login are not bypassed and can block automation.
+
+Some dynamic UI elements might cause occasional flaky tests due to timing.
+
+Rate limits or throttling on the website might affect repeated test runs.
+
+Additional Notes
+Ensure your .env file is included in .gitignore to protect sensitive data.
+
+Test data generation uses timestamp-based email aliasing for uniqueness.
+
+Please report any issues or flaky tests via GitHub Issues.
+
 
 
